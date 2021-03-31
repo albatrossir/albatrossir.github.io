@@ -1,0 +1,468 @@
+{
+    "swagger": "2.0",
+    "basePath": "/api",
+    "paths": {
+        "/endpoint/checkin": {
+            "put": {
+                "responses": {
+                    "403": {
+                        "description": "Wrong Keys Provided"
+                    },
+                    "200": {
+                        "description": "Connection Sucessful"
+                    }
+                },
+                "summary": "Post on Sucessful Installation",
+                "operationId": "put_checkin",
+                "parameters": [
+                    {
+                        "name": "payload",
+                        "required": true,
+                        "in": "body",
+                        "schema": {
+                            "$ref": "#/definitions/Install%20Post"
+                        }
+                    }
+                ],
+                "tags": [
+                    "endpoint"
+                ]
+            }
+        },
+        "/endpoint/install/{version}": {
+            "parameters": [
+                {
+                    "name": "version",
+                    "in": "path",
+                    "required": true,
+                    "type": "string"
+                }
+            ],
+            "get": {
+                "responses": {
+                    "404": {
+                        "description": "Version not Found"
+                    },
+                    "200": {
+                        "description": "Sucessfully Provided Installer"
+                    }
+                },
+                "summary": "Get Installation files",
+                "operationId": "get_install",
+                "tags": [
+                    "endpoint"
+                ]
+            }
+        },
+        "/endpoint/logs/{hostname}": {
+            "parameters": [
+                {
+                    "name": "hostname",
+                    "in": "path",
+                    "required": true,
+                    "type": "string"
+                }
+            ],
+            "put": {
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "operationId": "put_logs",
+                "tags": [
+                    "endpoint"
+                ]
+            }
+        },
+        "/endpoint/snapshot": {
+            "put": {
+                "responses": {
+                    "404": {
+                        "description": "Host Does Not Exist"
+                    },
+                    "500": {
+                        "description": "No FQDN Specified"
+                    },
+                    "200": {
+                        "description": "Connection Sucessful"
+                    }
+                },
+                "operationId": "put_snapshot",
+                "tags": [
+                    "endpoint"
+                ]
+            }
+        },
+        "/endpoint/task/{task_id}": {
+            "parameters": [
+                {
+                    "name": "task_id",
+                    "in": "path",
+                    "required": true,
+                    "type": "integer"
+                }
+            ],
+            "put": {
+                "responses": {
+                    "200": {
+                        "description": "Task Completed Successfully"
+                    },
+                    "404": {
+                        "description": "Task Not Found"
+                    }
+                },
+                "summary": "Return Results of a Task",
+                "operationId": "put_task",
+                "tags": [
+                    "endpoint"
+                ]
+            }
+        },
+        "/endpoint/tasks/{hostname}": {
+            "parameters": [
+                {
+                    "name": "hostname",
+                    "in": "path",
+                    "required": true,
+                    "type": "string"
+                }
+            ],
+            "get": {
+                "responses": {
+                    "200": {
+                        "description": "Tasks Identified"
+                    },
+                    "404": {
+                        "description": "Host Not Found"
+                    }
+                },
+                "summary": "Get a task for the specified host",
+                "operationId": "get_tasks",
+                "tags": [
+                    "endpoint"
+                ]
+            }
+        },
+        "/investigate/hosts": {
+            "get": {
+                "responses": {
+                    "401": {
+                        "description": "Authorization Missing"
+                    },
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/Hosts_Response"
+                        }
+                    }
+                },
+                "summary": "Returns a list of hosts",
+                "operationId": "get_hosts",
+                "parameters": [
+                    {
+                        "name": "X-Fields",
+                        "in": "header",
+                        "type": "string",
+                        "format": "mask",
+                        "description": "An optional fields mask"
+                    }
+                ],
+                "security": [
+                    {
+                        "apikey": []
+                    }
+                ],
+                "tags": [
+                    "investigate"
+                ]
+            }
+        },
+        "/investigate/login": {
+            "put": {
+                "responses": {
+                    "401": {
+                        "description": "Authorization Missing"
+                    },
+                    "403": {
+                        "description": "Access Denied"
+                    },
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/Login_Response"
+                        }
+                    }
+                },
+                "summary": "Login, returns apikey",
+                "operationId": "put_login",
+                "parameters": [
+                    {
+                        "name": "payload",
+                        "required": true,
+                        "in": "body",
+                        "schema": {
+                            "$ref": "#/definitions/Login%20Request"
+                        }
+                    },
+                    {
+                        "name": "X-Fields",
+                        "in": "header",
+                        "type": "string",
+                        "format": "mask",
+                        "description": "An optional fields mask"
+                    }
+                ],
+                "tags": [
+                    "investigate"
+                ]
+            }
+        },
+        "/investigate/task": {
+            "put": {
+                "responses": {
+                    "404": {
+                        "description": "Host Does Not Exist"
+                    },
+                    "403": {
+                        "description": "Wrong Keys Provided"
+                    },
+                    "500": {
+                        "description": "Task Went Wrong"
+                    },
+                    "401": {
+                        "description": "Authorization Missing"
+                    },
+                    "200": {
+                        "description": "Task Added Sucessfully"
+                    }
+                },
+                "summary": "Create a new task",
+                "operationId": "put_add_task",
+                "parameters": [
+                    {
+                        "name": "payload",
+                        "required": true,
+                        "in": "body",
+                        "schema": {
+                            "$ref": "#/definitions/Add%20Task%20Request"
+                        }
+                    }
+                ],
+                "security": [
+                    {
+                        "apikey": []
+                    }
+                ],
+                "tags": [
+                    "investigate"
+                ]
+            }
+        },
+        "/investigate/task/{task_id}": {
+            "parameters": [
+                {
+                    "name": "task_id",
+                    "in": "path",
+                    "required": true,
+                    "type": "integer"
+                }
+            ],
+            "get": {
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "summary": "Get the Result of a task",
+                "operationId": "get_task_result",
+                "security": [
+                    {
+                        "apikey": []
+                    }
+                ],
+                "tags": [
+                    "investigate"
+                ]
+            }
+        },
+        "/investigate/tasks/{host_id}": {
+            "parameters": [
+                {
+                    "name": "host_id",
+                    "in": "path",
+                    "required": true,
+                    "type": "integer"
+                }
+            ],
+            "get": {
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "operationId": "get_tasks",
+                "security": [
+                    {
+                        "apikey": []
+                    }
+                ],
+                "tags": [
+                    "investigate"
+                ]
+            }
+        }
+    },
+    "info": {
+        "title": "Albatross",
+        "version": "0.1"
+    },
+    "produces": [
+        "application/json"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "securityDefinitions": {
+        "apikey": {
+            "type": "apiKey",
+            "in": "header",
+            "name": "Authorization"
+        }
+    },
+    "tags": [
+        {
+            "name": "endpoint",
+            "description": "Endpoint Operations"
+        },
+        {
+            "name": "investigate",
+            "description": "Investigative Operations"
+        }
+    ],
+    "definitions": {
+        "Install Post": {
+            "properties": {
+                "fqdn": {
+                    "type": "string"
+                },
+                "ip_address": {
+                    "type": "string"
+                },
+                "os_version": {
+                    "type": "string"
+                },
+                "investigate": {
+                    "type": "boolean"
+                }
+            },
+            "type": "object"
+        },
+        "Add Task Request": {
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "task": {
+                    "$ref": "#/definitions/Task"
+                }
+            },
+            "type": "object"
+        },
+        "Task": {
+            "properties": {
+                "task_name": {
+                    "type": "string"
+                },
+                "args": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Args"
+                    }
+                }
+            },
+            "type": "object"
+        },
+        "Args": {
+            "properties": {
+                "arg": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "Login Request": {
+            "properties": {
+                "username": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "Login_Response": {
+            "properties": {
+                "key": {
+                    "type": "string"
+                },
+                "message": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "Hosts_Response": {
+            "properties": {
+                "message": {
+                    "type": "string"
+                },
+                "hosts": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/hosts_fields"
+                    }
+                }
+            },
+            "type": "object"
+        },
+        "hosts_fields": {
+            "properties": {
+                "ID": {
+                    "type": "integer"
+                },
+                "Hostname": {
+                    "type": "string"
+                },
+                "IP Address": {
+                    "type": "string"
+                },
+                "OS Version": {
+                    "type": "string"
+                },
+                "First Seen": {
+                    "type": "string"
+                },
+                "Last Seen": {
+                    "type": "string"
+                },
+                "Isolated": {
+                    "type": "boolean"
+                },
+                "Investigate": {
+                    "type": "boolean"
+                }
+            },
+            "type": "object"
+        }
+    },
+    "responses": {
+        "ParseError": {
+            "description": "When a mask can't be parsed"
+        },
+        "MaskError": {
+            "description": "When any error occurs on mask"
+        }
+    }
+}

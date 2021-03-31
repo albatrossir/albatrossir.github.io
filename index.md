@@ -1,37 +1,29 @@
-## Welcome to GitHub Pages
+## Albatross
 
-You can use the [editor on GitHub](https://github.com/albatrossir/albatrossir.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
+Albatross is a remote access tool specifically designed for enabling Host Forensics investigations and threat hunting on remote endpoints. Albatross was designed to be as simple to use as possible, while providing an extendable platform to build tooling on. 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+It consists of two components. A restful API Server built to a single executable for portability, and an Endpoint Agent, currently supporting Windows 7 and 10 with future support planned for OSX and Debian Based Systems.
 
-### Markdown
+### The Server
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+The Server is a standalone executable, designed to be as portable as possible with low system requirements. It uses a sqlite backend which we have found to be sufficient for a large number of endpoints.
 
-```markdown
-Syntax highlighted code block
+The Server exposes two API's, the first for the endpoint agent, the second for analysis tools.
 
-# Header 1
-## Header 2
-### Header 3
+The API Specs can be found [Here](dist/index.html)
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
+### The Endpoint
 
-**Bold** and _Italic_ and `Code` text
+The endpoint agent is responsible for providing data, and executing tasks to the API
 
-[Link](url) and ![Image](src)
-```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## Installation
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/albatrossir/albatrossir.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+- Download latest release.
+- `albatross.exe --init`
+    - Creates the relevant databases and directories, creates an administrative user and generates SSL keys.
+- `albatross.exe --fingerprint`
+    - Displays the SSL Fingerprint you'll need to feed to the endpoint installer
+- `albatross.exe --runserver`
+    - Runs the server..

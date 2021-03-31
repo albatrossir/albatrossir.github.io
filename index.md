@@ -10,7 +10,7 @@ The Server is a standalone executable, designed to be as portable as possible wi
 
 The Server exposes two API's, the first for the endpoint agent, the second for analysis tools.
 
-The API Specs can be found [Here](dist/index.html)
+The API Specs can be found [Here](swagger/index.html)
 
 
 ### The Endpoint

@@ -2,6 +2,27 @@
     "swagger": "2.0",
     "basePath": "/api",
     "paths": {
+        "/investigate/files": {
+            "get": {
+                "responses": {
+                    "401": {
+                        "description": "Authorization Missing"
+                    },
+                    "200": {
+                        "description": "Hosts"
+                    }
+                },
+                "operationId": "get_files",
+                "security": [
+                    {
+                        "apikey": []
+                    }
+                ],
+                "tags": [
+                    "investigate"
+                ]
+            }
+        },
         "/investigate/hosts": {
             "get": {
                 "responses": {
@@ -69,6 +90,58 @@
                         "type": "string",
                         "format": "mask",
                         "description": "An optional fields mask"
+                    }
+                ],
+                "tags": [
+                    "investigate"
+                ]
+            }
+        },
+        "/investigate/snapshots": {
+            "get": {
+                "responses": {
+                    "401": {
+                        "description": "Authorization Missing"
+                    },
+                    "200": {
+                        "description": "Snapshots"
+                    }
+                },
+                "summary": "Returns a list of snapshots, optionally for a specific host",
+                "operationId": "get_snapshots",
+                "security": [
+                    {
+                        "apikey": []
+                    }
+                ],
+                "tags": [
+                    "investigate"
+                ]
+            }
+        },
+        "/investigate/snapshots/{host_id}": {
+            "parameters": [
+                {
+                    "name": "host_id",
+                    "in": "path",
+                    "required": true,
+                    "type": "integer"
+                }
+            ],
+            "get": {
+                "responses": {
+                    "401": {
+                        "description": "Authorization Missing"
+                    },
+                    "200": {
+                        "description": "Snapshots"
+                    }
+                },
+                "summary": "Returns a list of snapshots, optionally for a specific host",
+                "operationId": "get_snapshots",
+                "security": [
+                    {
+                        "apikey": []
                     }
                 ],
                 "tags": [

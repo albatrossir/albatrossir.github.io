@@ -6,7 +6,7 @@ It consists of two components. A restful API Server built to a single executable
 
 Longer term, the code may be made open source (once it's at a state of tidiness befitting an open source project). For now, the documentation is open for development on top of the server API.
 
-Any issues can be reported [here](https://github.com/albatrossir/albatrossir.github.io/issues)
+Any issues can be reported [here](https://github.com/albatrossir/albatrossir.github.io/issues).
 
 ### The Server
 
@@ -14,7 +14,7 @@ The Server is a standalone executable, designed to be as portable as possible wi
 
 The Server exposes two API's, the first for the endpoint agent, the second for analysis tools.
 
-The API Specs can be found [Here](swagger/index.html) OLD VERSION BEWARE!
+The API Specs can be found [here](swagger/index.html).
 
 
 ### The Endpoint

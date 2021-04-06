@@ -4,6 +4,10 @@ Albatross is a remote access tool specifically designed for enabling Host Forens
 
 It consists of two components. A restful API Server built to a single executable for portability, and an Endpoint Agent, currently supporting Windows 7 and 10 with future support planned for OSX and Debian Based Systems.
 
+Longer term, the code may be made open source (once it's at a state of tidiness befitting an open source project). For now, the documentation is open for development on top of the server API.
+
+Any issues can be reported [here](https://github.com/albatrossir/albatrossir.github.io/issues)
+
 ### The Server
 
 The Server is a standalone executable, designed to be as portable as possible with low system requirements. It uses a sqlite backend which we have found to be sufficient for a large number of endpoints.

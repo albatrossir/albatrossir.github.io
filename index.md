@@ -8,6 +8,8 @@ Longer term, the code may be made open source (once it's at a state of tidiness 
 
 Any issues can be reported [here](https://github.com/albatrossir/albatrossir.github.io/issues).
 
+A short and super professional video demo can be found [here](https://vimeo.com/533620315)
+
 ### The Server
 
 The Server is a standalone executable, designed to be as portable as possible with low system requirements. It uses a sqlite backend which we have found to be sufficient for a large number of endpoints.

@@ -62,3 +62,10 @@ Supported Commands
 - `cwd` - print current directory
 - `get <filename/filepath>` - Downloads a file from the current directory, or from a path if specified
 - `back` - stop working on a host
+
+
+## Changelog
+
+### 06/04/2021 0.01
+
+Initial Release

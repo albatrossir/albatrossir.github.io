@@ -15,7 +15,11 @@ The API Specs can be found [Here](swagger/index.html) OLD VERSION BEWARE!
 
 ### The Endpoint
 
-The endpoint agent is responsible for providing data, and executing tasks to the API
+The endpoint agent is responsible for providing data, and executing tasks to the API.
+
+By default it will also collect Windows event logs, and take a full Snapshot once per 24 hours, including a file listing, with MD5 and SHA256 file hashes.
+
+The endpoint will install and set itself to run as a system level service.
 
 
 ## Installation
@@ -29,6 +33,8 @@ The endpoint agent is responsible for providing data, and executing tasks to the
     - Runs the server..
 
 ## Agent Install
+
+As administrator:
 
 - `albatross_installer_windows <ip address> <port> <fingerprint>`
     - Installs Albatross to %PROGRAMFILES%\Albatross

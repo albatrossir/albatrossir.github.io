@@ -84,7 +84,7 @@ Supported Commands
 
 ### 0.02 xx/xx/xxxx
 
-- Closed #3 : CLI Tool File Timestamps
+- 11/05/2021: Closed [#3](https://github.com/albatrossir/albatrossir.github.io/issues/3) : CLI Tool File Timestamps
 
 ### 0.01 06/04/2021
 

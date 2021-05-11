@@ -87,6 +87,7 @@ Supported Commands
 - 11/05/2021: Enhancement [#3](https://github.com/albatrossir/albatrossir.github.io/issues/3) : CLI Tool File Timestamps.
 - 11/05/2021: Bugfix [#13](https://github.com/albatrossir/albatrossir.github.io/issues/13): Error when listing snapshots that do not exist.
 - 11/05/2021: Bugfix [#9](https://github.com/albatrossir/albatrossir.github.io/issues/9): Error when running ls with no snapshot
+- 11/05/2021: Enhancement [#7](https://github.com/albatrossir/albatrossir.github.io/issues/7): Added piping to command line with support for `more` and `grep`
 
 ### 0.01 06/04/2021
 

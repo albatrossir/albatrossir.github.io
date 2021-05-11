@@ -84,9 +84,9 @@ Supported Commands
 
 ### 0.02 xx/xx/xxxx
 
-- 11/05/2021: Closed [#3](https://github.com/albatrossir/albatrossir.github.io/issues/3) : CLI Tool File Timestamps.
-- 11/05/2021: Closed [#13](https://github.com/albatrossir/albatrossir.github.io/issues/13): Error when listing snapshots that do not exist.
-- 11/05/2021: Closed [#9](https://github.com/albatrossir/albatrossir.github.io/issues/9): Error when running ls with no snapshot
+- 11/05/2021: Enhancement [#3](https://github.com/albatrossir/albatrossir.github.io/issues/3) : CLI Tool File Timestamps.
+- 11/05/2021: Bugfix [#13](https://github.com/albatrossir/albatrossir.github.io/issues/13): Error when listing snapshots that do not exist.
+- 11/05/2021: Bugfix [#9](https://github.com/albatrossir/albatrossir.github.io/issues/9): Error when running ls with no snapshot
 
 ### 0.01 06/04/2021
 

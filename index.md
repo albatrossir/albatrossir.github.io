@@ -84,6 +84,7 @@ Supported Commands
 
 ### 0.02 xx/xx/xxxx
 
+- 19/05/2021: Enhancement [#6](https://github.com/albatrossir/albatrossir.github.io/issues/6): Event Log Normalisation
 - 14/05/2021: Bugfix [#14](https://github.com/albatrossir/albatrossir.github.io/issues/14) : Inconsistent snapshots caused by flawed implementation of time check.
 - 11/05/2021: Enhancement [#3](https://github.com/albatrossir/albatrossir.github.io/issues/3) : CLI Tool File Timestamps.
 - 11/05/2021: Bugfix [#13](https://github.com/albatrossir/albatrossir.github.io/issues/13): Error when listing snapshots that do not exist.

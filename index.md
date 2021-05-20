@@ -84,6 +84,7 @@ Supported Commands
 
 ### 0.02 xx/xx/xxxx
 
+- 20/05/2021: Bugfix [#18]https://github.com/albatrossir/albatrossir.github.io/issues/18): Binary Files Causing Crash
 - 19/05/2021: Bugfix [#12](https://github.com/albatrossir/albatrossir.github.io/issues/12): Agent Logging Verbosity
 - 19/05/2021: Bugfix [#15](https://github.com/albatrossir/albatrossir.github.io/issues/15): Windows Agent Service Install Type
 - 19/05/2021: Enhancement [#6](https://github.com/albatrossir/albatrossir.github.io/issues/6): Event Log Normalisation

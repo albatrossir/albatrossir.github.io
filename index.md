@@ -84,6 +84,8 @@ Supported Commands
 
 ### 0.02 xx/xx/xxxx
 
+- 21/05/2021: Enhancement [#19](https://github.com/albatrossir/albatrossir.github.io/issues/19): Text Wrapping in Albatross CLI Tool
+- 21/05/2021: Enhancement [#17](https://github.com/albatrossir/albatrossir.github.io/issues/17): Log Sync Frequency adjusted
 - 20/05/2021: Bugfix [#18]https://github.com/albatrossir/albatrossir.github.io/issues/18): Binary Files Causing Crash
 - 19/05/2021: Bugfix [#12](https://github.com/albatrossir/albatrossir.github.io/issues/12): Agent Logging Verbosity
 - 19/05/2021: Bugfix [#15](https://github.com/albatrossir/albatrossir.github.io/issues/15): Windows Agent Service Install Type

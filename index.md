@@ -84,6 +84,7 @@ Supported Commands
 
 ### 0.02 xx/xx/xxxx
 
+- 03/06/2021: Bugfix - Expired api keys causing error.
 - 25/05/2021: Engancement [#20](https://github.com/albatrossir/albatrossir.github.io/issues/20): Store Logs per date.
 - 21/05/2021: Enhancement [#19](https://github.com/albatrossir/albatrossir.github.io/issues/19): Text Wrapping in Albatross CLI Tool
 - 21/05/2021: Enhancement [#17](https://github.com/albatrossir/albatrossir.github.io/issues/17): Log Sync Frequency adjusted

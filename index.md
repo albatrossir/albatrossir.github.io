@@ -83,6 +83,7 @@ Supported Commands
 ## Changelog
 
 ### 0.02 xx/xx/xxxx
+- 07/07/2021: Bugfix [#1](https://github.com/albatrossir/albatrossir.github.io/issues/1): Crash on file fetch
 - 07/07/2021: Enhancement [#4](https://github.com/albatrossir/albatrossir.github.io/issues/4): Rotate Snapshots
 - 07/07/2021: Enhancement [#10](https://github.com/albatrossir/albatrossir.github.io/issues/10): Add User Function
 - 03/06/2021: Bugfix - Expired api keys causing error.

@@ -83,6 +83,8 @@ Supported Commands
 ## Changelog
 
 ### 0.02 xx/xx/xxxx
+- 19/07/2021: Bugfix [#22](https://github.com/albatrossir/albatrossir.github.io/issues/22): Fix Bug where Provider.Name contains a space
+- 19/07/2021: Enhancement [#8](https://github.com/albatrossir/albatrossir.github.io/issues/8): Allow Requesting data by snapshot.
 - 07/07/2021: Bugfix [#1](https://github.com/albatrossir/albatrossir.github.io/issues/1): Crash on file fetch
 - 07/07/2021: Enhancement [#4](https://github.com/albatrossir/albatrossir.github.io/issues/4): Rotate Snapshots
 - 07/07/2021: Enhancement [#10](https://github.com/albatrossir/albatrossir.github.io/issues/10): Add User Function

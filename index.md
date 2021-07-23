@@ -83,6 +83,9 @@ Supported Commands
 ## Changelog
 
 ### 0.03 xx/xx/xxxx
+- 23/08/2021: Bugfix - Various
+- 23/08/2021: Enhancement [#23](https://github.com/albatrossir/albatrossir.github.io/issues/23): Query snapshot data
+- 23/08/2021: Enhancement [#5](https://github.com/albatrossir/albatrossir.github.io/issues/5): Implement Log Search API Endpoint
 
 ### 0.02 19/07/2021
 - 19/07/2021: Bugfix [#22](https://github.com/albatrossir/albatrossir.github.io/issues/22): Fix Bug where Provider.Name contains a space

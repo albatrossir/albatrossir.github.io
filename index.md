@@ -83,6 +83,7 @@ Supported Commands
 ## Changelog
 
 ### 0.03 xx/xx/xxxx
+- 11/02/2021: Enhancement [#11](https://github.com/albatrossir/albatrossir.github.io/issues/11): Randomise Snapshot time.
 - 11/02/2021: Bugfix - Snapshot Rollover Issue
 - 23/08/2021: Bugfix - Various
 - 23/08/2021: Enhancement [#23](https://github.com/albatrossir/albatrossir.github.io/issues/23): Query snapshot data
